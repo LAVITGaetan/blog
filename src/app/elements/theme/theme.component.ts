@@ -7,12 +7,22 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./theme.component.css']
 })
 export class ThemeComponent {
-  accentColor: string = "purple"
-  themeSelected: string = "dark"
+  accentColor: string = localStorage.getItem('color') || 'purple'
+  themeSelected: string = localStorage.getItem('theme') || 'dark'
   constructor(private themeService: ThemeService) {
+
     this.themeService.theme$.subscribe(theme => {
       this.themeSelected = theme;
     });
+  }
+
+  ngOnInit() {
+    this.applyTheme(this.themeSelected, this.accentColor);
+  }
+
+  applyTheme(theme: string, color: string) {
+    this.addBorder(theme);
+    this.changeAccentColor(color)
   }
   closeSettings() {
     let setting = document.getElementById("settings")
@@ -62,10 +72,10 @@ export class ThemeComponent {
         case 'green':
           document.documentElement.style.setProperty('--clr-accent-selected', '#44b678');
           break;
-           case 'pink':
+        case 'pink':
           document.documentElement.style.setProperty('--clr-accent-selected', '#FC0099');
-          break; 
-          case 'yellow':
+          break;
+        case 'yellow':
           document.documentElement.style.setProperty('--clr-accent-selected', '#FDAB05');
           break;
         default:
@@ -79,10 +89,10 @@ export class ThemeComponent {
         case 'green':
           document.documentElement.style.setProperty('--clr-accent-selected', '#8BFF8B');
           break;
-           case 'pink':
+        case 'pink':
           document.documentElement.style.setProperty('--clr-accent-selected', '#FD86CE');
-          break; 
-          case 'yellow':
+          break;
+        case 'yellow':
           document.documentElement.style.setProperty('--clr-accent-selected', '#FBD47E');
           break;
         default:
@@ -93,6 +103,7 @@ export class ThemeComponent {
 
   changeAccentColor(color: string) {
     this.accentColor = color;
+    localStorage.setItem('color', color);
     this.setAccentColor(this.themeSelected)
   }
 }

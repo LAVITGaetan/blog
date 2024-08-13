@@ -27,8 +27,18 @@
 .navbar-link {
     text-decoration: none;
     color: var(--clr-text);
+    font-weight: 600;
+    position: relative;
+    border-bottom: 2px solid transparent;
+    transition: .3s;
+    height: fit-content;
+    padding-bottom: 4px;
 }
 
+
+.navbar-link:hover {
+    border-bottom: 2px solid var(--clr-accent-selected);
+}
 
 @media screen and (max-width: 600px) {
     .navbar {

@@ -7,11 +7,13 @@ import { BehaviorSubject } from 'rxjs';
 export class ThemeService {
 
   constructor() { }
-    private themeSubject = new BehaviorSubject<string>('dark');
+   savedTheme = localStorage.getItem('theme') || 'dark';
+    private themeSubject = new BehaviorSubject<string>(this.savedTheme);
     
     theme$ = this.themeSubject.asObservable();
   
     setTheme(theme: string) {
       this.themeSubject.next(theme);
+      localStorage.setItem('theme', theme);
     }
 }
