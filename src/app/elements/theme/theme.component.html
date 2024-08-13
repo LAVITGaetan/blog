@@ -36,10 +36,10 @@
     <h3 class="theme-subtitle">Couleur principal</h3>
     <p class="theme-description">Chosissez la couleur principale de l'application</p>
     <div class="theme-colors">
-        <div class="color-item item-purple" (click)="changeAccentColor('purple')"></div>
-        <div class="color-item item-green" (click)="changeAccentColor('green')"></div>
-        <div class="color-item item-pink" (click)="changeAccentColor('pink')"></div>
-        <div class="color-item item-yellow" (click)="changeAccentColor('yellow')"></div>
+        <div class="color-item item-purple" [ngClass]="{'accent-color': accentColor === 'purple'}" (click)="changeAccentColor('purple')"></div>
+        <div class="color-item item-green" [ngClass]="{'accent-color': accentColor === 'green'}" (click)="changeAccentColor('green')"></div>
+        <div class="color-item item-pink" [ngClass]="{'accent-color': accentColor === 'pink'}" (click)="changeAccentColor('pink')"></div>
+        <div class="color-item item-yellow" [ngClass]="{'accent-color': accentColor === 'yellow'}" (click)="changeAccentColor('yellow')"></div>
     </div>
     <div class="theme-separator-1"></div>
     <div class="theme-actions">

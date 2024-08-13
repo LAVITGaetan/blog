@@ -7,7 +7,7 @@ import { ThemeService } from 'src/app/services/theme.service';
   styleUrls: ['./theme.component.css']
 })
 export class ThemeComponent {
-
+  accentColor: string = "purple"
   themeSelected: string = "dark"
   constructor(private themeService: ThemeService) {
     this.themeService.theme$.subscribe(theme => {
@@ -30,10 +30,10 @@ export class ThemeComponent {
         document.documentElement.style.setProperty('--clr-text', '#111824');
         document.documentElement.style.setProperty('--clr-text-grey', '#2E3542');
         document.documentElement.style.setProperty('--clr-purple', '#0402FE');
-        document.documentElement.style.setProperty('--clr-green', '#07FE1B');
+        document.documentElement.style.setProperty('--clr-green', '#44b678');
         document.documentElement.style.setProperty('--clr-pink', '#FC0299');
         document.documentElement.style.setProperty('--clr-yellow', '#FDAB05');
-
+        this.setAccentColor(theme)
         break;
       case 'dark':
         document.getElementsByClassName('interface-item-block')[0].classList.remove('border-selected')
@@ -46,31 +46,53 @@ export class ThemeComponent {
         document.documentElement.style.setProperty('--clr-green', '#8BFF8B');
         document.documentElement.style.setProperty('--clr-pink', '#FD86CE');
         document.documentElement.style.setProperty('--clr-yellow', '#FBD47E');
+        document.documentElement.style.setProperty('--clr-yellow', '#FBD47E');
+        this.setAccentColor(theme)
         break;
       default:
         break;
     }
   }
-  changeAccentColor(color: string) {
-    let selected_color = ''
-    switch (color) {
-      case 'purple':
-        selected_color = '#8787FA';
-        break;
-      case 'green':
-        selected_color = '#8BFF8B';
-        break;
-      case 'pink':
-        selected_color = '#FD86CE';
-        break;
-      case 'yellow':
-        selected_color = '#FBD47E';
-        break;
-
-      default:
-        selected_color = '#8787FA';
-        break;
+  setAccentColor(theme: string) {
+    if (theme === 'light') {
+      switch (this.accentColor) {
+        case 'purple':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#0402FE');
+          break;
+        case 'green':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#44b678');
+          break;
+           case 'pink':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#FC0099');
+          break; 
+          case 'yellow':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#FDAB05');
+          break;
+        default:
+          break;
+      }
+    } else {
+      switch (this.accentColor) {
+        case 'purple':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#8787FA');
+          break;
+        case 'green':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#8BFF8B');
+          break;
+           case 'pink':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#FD86CE');
+          break; 
+          case 'yellow':
+          document.documentElement.style.setProperty('--clr-accent-selected', '#FBD47E');
+          break;
+        default:
+          break;
+      }
     }
-    document.documentElement.style.setProperty('--clr-accent-selected', selected_color);
+  }
+
+  changeAccentColor(color: string) {
+    this.accentColor = color;
+    this.setAccentColor(this.themeSelected)
   }
 }
