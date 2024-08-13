@@ -6,6 +6,7 @@
         <a class="navbar-link" href="/categories">Catégories</a>
     </div>
     <div class="navbar-setting">
-        <button>Theme</button>
+        <div *ngIf="themeSelected == 'dark'" (click)="showSettings()"><img src="../../../assets/img/settings-dark.png" width="24px" height="24px" alt="Thème"></div>
+        <div *ngIf="themeSelected == 'light'" (click)="showSettings()"><img src="../../../assets/img/settings-white.png" width="24px" height="24px" alt="Thème"></div>
     </div>
 </div>

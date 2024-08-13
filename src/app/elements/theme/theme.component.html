@@ -1,0 +1,49 @@
+<div class="theme" id="settings">
+    <div class="flex">
+        <h2 class="theme-title">Réglages</h2>
+        <div class="theme-close">
+            <img (click)="closeSettings()" *ngIf="themeSelected == 'dark'" src="../../../assets/img/close-dark.png" width="24px" height="24px" alt="Fermer">
+            <img (click)="closeSettings()" *ngIf="themeSelected == 'light'" src="../../../assets/img/close-white.png" width="24px" height="24px" alt="Fermer">
+        </div>
+    </div>
+
+    <div class="theme-separator-0"></div>
+
+    <h3 class="theme-subtitle">Thème d'interface</h3>
+    <p class="theme-description">Modifier l'apparence de l'application</p>
+    <div class="theme-interface">
+        <div class="interface-item">
+            <div class="interface-item-block block-light" (click)="addBorder('light')">
+                <div class="block-design1 design-light"></div>
+                <div class="block-design2 design-light"></div>
+                <div class="block-design3 design-light"></div>
+                <div class="block-design4 design-light"></div>
+                <div class="block-design5 design-light"></div>
+            </div>
+            <div class="interface-item-text">Thème clair</div>
+        </div>
+        <div class="interface-item">
+            <div class="interface-item-block block-dark border-selected" (click)="addBorder('dark')">
+                <div class="block-design1 design-dark"></div>
+                <div class="block-design2 design-dark"></div>
+                <div class="block-design3 design-dark"></div>
+                <div class="block-design4 design-dark"></div>
+                <div class="block-design5 design-dark"></div>
+            </div>
+            <div class="interface-item-text">Thème sombre</div>
+        </div>
+    </div>
+    <h3 class="theme-subtitle">Couleur principal</h3>
+    <p class="theme-description">Chosissez la couleur principale de l'application</p>
+    <div class="theme-colors">
+        <div class="color-item item-purple" (click)="changeAccentColor('purple')"></div>
+        <div class="color-item item-green" (click)="changeAccentColor('green')"></div>
+        <div class="color-item item-pink" (click)="changeAccentColor('pink')"></div>
+        <div class="color-item item-yellow" (click)="changeAccentColor('yellow')"></div>
+    </div>
+    <div class="theme-separator-1"></div>
+    <div class="theme-actions">
+        <button class="theme-cancel">Annuler</button>
+        <button class="theme-confirm background-selected">Sauvegarder</button>
+    </div>
+</div>

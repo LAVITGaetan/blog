@@ -4,12 +4,34 @@
     padding: 24px 15%;
 }
 
+
+.navbar-logo {
+    color: var(--clr-text);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 0;
+}
+
+.logo-design {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--clr-accent-selected);
+}
+
 .navbar-links {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 32px;
 }
 
 .navbar-link {
     text-decoration: none;
+    color: var(--clr-text);
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar {
+       display: none;
+    }
 }

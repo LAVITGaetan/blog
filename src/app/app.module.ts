@@ -10,6 +10,7 @@ import { ArticlesComponent } from './pages/articles/articles.component';
 import { HeroComponent } from './elements/hero/hero.component';
 import { FooterComponent } from './elements/footer/footer.component';
 import { LastArticlesComponent } from './elements/last-articles/last-articles.component';
+import { ThemeComponent } from './elements/theme/theme.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LastArticlesComponent } from './elements/last-articles/last-articles.co
     ArticlesComponent,
     HeroComponent,
     FooterComponent,
-    LastArticlesComponent
+    LastArticlesComponent,
+    ThemeComponent
   ],
   imports: [
     BrowserModule,
