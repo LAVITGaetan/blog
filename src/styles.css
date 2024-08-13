@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-main: #111824;
+    --clr-accent-0: #8787FA;
+    --clr-accent-1: #FBD47E;
+    --clr-accent-2: #FD86CE;
+    --clr-accent-3: #8BFF8B;
+    --clr-grey: #E2E4EF;
+    --clr-text: #FFFFFF;
+}
+
+@font-face {
+    font-family: montserrat;
+    src: url(./assets/fonts/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+
+@font-face {
+    font-family: nunito;
+    src: url(./assets/fonts/nunito/Nunito-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: montserrat;
+}
