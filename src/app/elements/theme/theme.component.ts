@@ -29,6 +29,11 @@ export class ThemeComponent {
         document.documentElement.style.setProperty('--clr-main-light', '#EAEBE9');
         document.documentElement.style.setProperty('--clr-text', '#111824');
         document.documentElement.style.setProperty('--clr-text-grey', '#2E3542');
+        document.documentElement.style.setProperty('--clr-purple', '#0402FE');
+        document.documentElement.style.setProperty('--clr-green', '#07FE1B');
+        document.documentElement.style.setProperty('--clr-pink', '#FC0299');
+        document.documentElement.style.setProperty('--clr-yellow', '#FDAB05');
+
         break;
       case 'dark':
         document.getElementsByClassName('interface-item-block')[0].classList.remove('border-selected')
@@ -36,7 +41,11 @@ export class ThemeComponent {
         document.documentElement.style.setProperty('--clr-main', '#111824');
         document.documentElement.style.setProperty('--clr-main-light', '#2E3542');
         document.documentElement.style.setProperty('--clr-text', '#ffffff');
-        document.documentElement.style.setProperty('--clr-text-grey', '#E2E4EF  ');
+        document.documentElement.style.setProperty('--clr-text-grey', '#E2E4EF');
+        document.documentElement.style.setProperty('--clr-purple', '#8787FA');
+        document.documentElement.style.setProperty('--clr-green', '#8BFF8B');
+        document.documentElement.style.setProperty('--clr-pink', '#FD86CE');
+        document.documentElement.style.setProperty('--clr-yellow', '#FBD47E');
         break;
       default:
         break;
