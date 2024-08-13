@@ -45,7 +45,7 @@
     justify-content: center;
 }
 
-.navbar-link:hover {
+.link-active {
     border-bottom: 2px solid var(--clr-accent-selected);
 }
 

@@ -1,9 +1,9 @@
 <div class="navbar">
     <div class="navbar-logo">Blog<span class="logo-design">.</span></div>
     <div class="navbar-links">
-        <a class="navbar-link" href="/">Accueil</a>
-        <a class="navbar-link" href="/articles">Articles</a>
-        <a class="navbar-link" href="/categories">Catégories</a>
+        <a class="navbar-link" [ngClass]="{'link-active': currentRoute === ''}" href="/">Accueil</a>
+        <a class="navbar-link" [ngClass]="{'link-active': currentRoute === 'articles'}" href="/articles">Articles</a>
+        <a class="navbar-link" [ngClass]="{'link-active': currentRoute === 'categories'}" href="/categories">Catégories</a>
     </div>
     <div class="navbar-setting">
         <div *ngIf="themeSelected == 'dark'" (click)="showSettings()"><img src="../../../assets/img/settings-dark.png" width="24px" height="24px" alt="Thème"></div>
