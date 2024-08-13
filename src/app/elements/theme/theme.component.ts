@@ -29,7 +29,7 @@ export class ThemeComponent {
         document.documentElement.style.setProperty('--clr-main-light', '#EAEBE9');
         document.documentElement.style.setProperty('--clr-text', '#111824');
         document.documentElement.style.setProperty('--clr-text-grey', '#2E3542');
-        document.documentElement.style.setProperty('--clr-purple', '#0402FE');
+        document.documentElement.style.setProperty('--clr-purple', '#7656ff');
         document.documentElement.style.setProperty('--clr-green', '#44b678');
         document.documentElement.style.setProperty('--clr-pink', '#FC0299');
         document.documentElement.style.setProperty('--clr-yellow', '#FDAB05');
@@ -57,7 +57,7 @@ export class ThemeComponent {
     if (theme === 'light') {
       switch (this.accentColor) {
         case 'purple':
-          document.documentElement.style.setProperty('--clr-accent-selected', '#0402FE');
+          document.documentElement.style.setProperty('--clr-accent-selected', '#7656ff');
           break;
         case 'green':
           document.documentElement.style.setProperty('--clr-accent-selected', '#44b678');
