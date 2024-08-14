@@ -1,3 +1,31 @@
 <app-navbar></app-navbar>
 <app-theme></app-theme>
-<p>articles works!</p>
+
+<div class="filter">
+    <div class="filter-item" (click)="filterArticles('histoire')" title="voir la catégorie">
+        <div class="item-name">Histoire</div>
+    </div>
+    <div class="filter-item" (click)="filterArticles('litterature')" title="voir la catégorie">
+        <div class="item-name">Littérature</div>
+    </div>
+    <div class="filter-item" (click)="filterArticles('uiux')" title="voir la catégorie">
+        <div class="item-name">UI/UX</div>
+    </div>
+    <div class="filter-item" (click)="filterArticles('tout')" title="voir la catégorie">
+        <div class="item-name">Tout</div>
+    </div>
+</div>
+<div class="blog">
+    <ng-container *ngFor="let article of articles">
+    <div *ngIf="currentCategory === 'tout' || currentCategory === article.category" class="blog-article"
+        title="Voir l'article" [ngStyle]="{'background-image': 'url(' + article.backgroundImage + ')'}">
+        <div class="article1">
+            <div class="article-tag">{{ article.tag }}</div>
+        </div>
+        <div class="article2">
+            <h3 class="article-title">{{ article.title }}</h3>
+        </div>
+    </div>
+    </ng-container>
+</div>
+<app-footer></app-footer>
