@@ -1,9 +1,10 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    padding: 24px 15%;
+    padding: 24px 12%;
+border-bottom: 2px solid var(--clr-main-light);
     background-color: var(--clr-main);
-    box-shadow: 2px 2px 10px 3px #00000010;
+    box-shadow: 2px 2px 10px 3px #0000001b;
 }
 
 
@@ -45,12 +46,23 @@
     justify-content: center;
 }
 
+.setting-icon {
+    transition: .3s;
+    transform: rotate(0);
+}
+
+.setting-icon:hover {
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+
 .link-active {
     border-bottom: 2px solid var(--clr-accent-selected);
 }
 
 @media screen and (max-width: 600px) {
     .navbar {
-       display: none;
+        display: none;
     }
 }

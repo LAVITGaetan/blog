@@ -1,0 +1,17 @@
+.categories {
+    padding: 0 12%;
+}
+
+.categories-title {
+    font-size: 22px;
+    color: var(--clr-text);
+    font-weight: 700;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+}

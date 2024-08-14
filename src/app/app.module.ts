@@ -11,6 +11,7 @@ import { LastArticlesComponent } from './elements/last-articles/last-articles.co
 import { ThemeComponent } from './elements/theme/theme.component';
 import { ArticlesComponent } from './pages/articles/articles.component';
 import { CategoriesComponent } from './pages/categories/categories.component';
+import { CategoriesListComponent } from './elements/categories-list/categories-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CategoriesComponent } from './pages/categories/categories.component';
     LastArticlesComponent,
     ThemeComponent,
     ArticlesComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    CategoriesListComponent
   ],
   imports: [
     BrowserModule,
