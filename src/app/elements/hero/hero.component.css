@@ -2,8 +2,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
+    grid-column-gap: 48px;
+    grid-row-gap: 48px;
     padding: 48px 12%;
 }
 
@@ -109,4 +109,25 @@ transform: scale(1.1);
     color: white;
     padding: 8px;
     font-weight: 600;
+}
+
+@media screen and (max-width:1200px) {
+    .hero {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+        padding: 24px 12%;
+    }
+}
+
+
+@media screen and (max-width:800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+        padding: 24px;
+    }
 }

@@ -1,7 +1,7 @@
 .footer {
     width: 100%;
     padding: 24px 12%;
-    background-color: var(--clr-accent-selected);
+    background-color: var(--clr-darker);
     color: white;
     display: flex;
     align-items: center;
@@ -12,4 +12,9 @@
     font-size: 18px;
     font-weight: 600;
     line-height: 0;
+    padding-right: 16px;
+}
+
+.footer-icon {
+    cursor: pointer;
 }

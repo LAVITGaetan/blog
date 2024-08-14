@@ -53,10 +53,9 @@ export class ThemeComponent {
         document.documentElement.style.setProperty('--clr-text', '#ffffff');
         document.documentElement.style.setProperty('--clr-text-grey', '#E2E4EF');
         document.documentElement.style.setProperty('--clr-purple', '#8787FA');
-        document.documentElement.style.setProperty('--clr-green', '#8BFF8B');
+        document.documentElement.style.setProperty('--clr-green', '#50d350');
         document.documentElement.style.setProperty('--clr-pink', '#FD86CE');
-        document.documentElement.style.setProperty('--clr-yellow', '#FBD47E');
-        document.documentElement.style.setProperty('--clr-yellow', '#FBD47E');
+        document.documentElement.style.setProperty('--clr-yellow', '#ffc139');
         this.setAccentColor(theme)
         break;
       default:
@@ -87,13 +86,13 @@ export class ThemeComponent {
           document.documentElement.style.setProperty('--clr-accent-selected', '#8787FA');
           break;
         case 'green':
-          document.documentElement.style.setProperty('--clr-accent-selected', '#8BFF8B');
+          document.documentElement.style.setProperty('--clr-accent-selected', '#50d350');
           break;
         case 'pink':
           document.documentElement.style.setProperty('--clr-accent-selected', '#FD86CE');
           break;
         case 'yellow':
-          document.documentElement.style.setProperty('--clr-accent-selected', '#FBD47E');
+          document.documentElement.style.setProperty('--clr-accent-selected', '#ffc139');
           break;
         default:
           break;
